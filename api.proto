@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package api;
+option optimize_for = SPEED;
+
+message User {
+    uint64 id = 1;
+    string email = 2;
+
+    repeated Instagram instagrams = 3;
+
+
+    // кол-во раундов, в которых победил данный пользователь
+    uint32 win_count = 4;
+    // сумма выигрышей пользователя по результатам всех раундов
+    double win_sum = 5;
+    //
+
+}
+
+
+message Instagram {
+    uint64 user_id = 1;
+    string username = 2;
+    string profile_picture = 3;
+    uint64 instagram_id = 4;
+    // кол-во подписчиков
+    uint64 subscribers = 5;
+    // ранг/уроверь в нашей системе
+    uint64 rang = 6;
+    // реферал, кто пригласил пользователя
+    uint64 parent_id = 7;
+}
