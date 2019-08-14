@@ -6,16 +6,7 @@ option optimize_for = SPEED;
 message User {
     uint64 id = 1;
     string email = 2;
-
     repeated Instagram instagrams = 3;
-
-
-    // кол-во раундов, в которых победил данный пользователь
-    uint32 win_count = 4;
-    // сумма выигрышей пользователя по результатам всех раундов
-    double win_sum = 5;
-    //
-
 }
 
 
