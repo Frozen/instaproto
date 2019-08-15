@@ -22,7 +22,19 @@ message Instagram {
     uint64 parent_id = 7;
 }
 
-message Interest {
+// тематика
+message Subject {
     uint64 id = 1;
     string name = 2;
+}
+
+message InstagramForm {
+    uint64 instagram_id = 1;
+    // тип акканта, личный 1, бизнес 2
+    uint64 account_type = 2;
+    // 1-3 включительно тематики, о которых мой аккаунт
+    repeated uint64 my_account_about = 3;
+    // 3 тематики, на которые мне интересно подписаться
+    repeated uint64 i_interested_in = 4;
+
 }
