@@ -9,7 +9,6 @@ message User {
     repeated Instagram instagrams = 3;
 }
 
-
 message Instagram {
     uint64 user_id = 1;
     string username = 2;
@@ -21,4 +20,9 @@ message Instagram {
     uint64 rang = 6;
     // реферал, кто пригласил пользователя
     uint64 parent_id = 7;
+}
+
+message Interest {
+    uint64 user_id = 1;
+    string name = 2;
 }
