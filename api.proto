@@ -38,3 +38,8 @@ message InstagramForm {
     repeated uint64 i_interested_in = 4;
 
 }
+
+message Login {
+    string email = 1;
+    string password = 2;
+}
