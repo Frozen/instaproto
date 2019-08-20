@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package admin;
+option optimize_for = SPEED;
+
+message Login {
+    string username = 1;
+    string password = 2;
+}
+
+message User {
+    uint64 id = 1;
+    string email = 2;
+}
+
+message InstagramAccount {
+    uint64 id = 1;
+    User user = 2;
+    string username = 3;
+    string image = 4;
+    string city = 5;
+    // пользователь прошел регистрацию
+    bool account_filled = 6;
+}

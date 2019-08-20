@@ -33,9 +33,11 @@ message InstagramForm {
     // тип акканта, личный 1, бизнес 2
     uint64 account_type = 2;
     // 1-3 включительно тематики, о которых мой аккаунт
-    repeated uint64 my_account_about = 3;
+    repeated uint64 my_account_subjects = 3;
     // 3 тематики, на которые мне интересно подписаться
-    repeated uint64 i_interested_in = 4;
+    repeated uint64 i_interested_in_subjects = 4;
+    // city
+    string city = 5;
 
 }
 
