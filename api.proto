@@ -3,6 +3,10 @@ syntax = "proto3";
 package pb;
 option optimize_for = SPEED;
 
+message Timestamp {
+
+}
+
 message User {
     uint64 id = 1;
     string email = 2;
@@ -62,4 +66,35 @@ message InstagramJobReceived {
     string instagram_username = 4;
 
     repeated string usernames = 5;
+}
+
+// обратная связь
+message NewTicket {
+    string title = 1;
+    string body = 2;
+    // 1 - Общие вопросы
+    // 2 - Финансы
+    // 3 - Технические вопросы
+    // 4 - Другое
+    uint64 category = 3;
+}
+
+message TicketMessage {
+    uint64 id = 1;
+    uint64 user_id = 2;
+    uint64 ticket_id = 3;
+    string message = 4;
+    uint64 admin_id = 5;
+    uint64 created_at = 6;
+}
+
+message Ticket {
+    uint64 id = 1;
+    string title = 2;
+    uint64 user_id = 3;
+    uint64 department = 4;
+    bool is_closed = 5;
+    // 0 пользователь, 1 админ
+    uint64 last_reply = 6;
+    uint64 created_at = 7;
 }
