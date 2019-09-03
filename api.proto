@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package api;
+package pb;
 option optimize_for = SPEED;
 
 message User {
@@ -44,4 +44,22 @@ message InstagramForm {
 message Login {
     string email = 1;
     string password = 2;
+}
+
+// workers
+message InstagramJob {
+    uint64 id = 1;
+    // название типа задачи
+    string name = 2;
+    uint64 instagram_accout_id = 3;
+    string instagram_username = 4;
+}
+
+message InstagramJobReceived {
+    uint64 id = 1;
+    string name = 2;
+    uint64 instagram_accout_id = 3;
+    string instagram_username = 4;
+
+    repeated string usernames = 5;
 }
