@@ -98,3 +98,23 @@ message Ticket {
     uint64 last_reply = 6;
     uint64 created_at = 7;
 }
+
+///////
+// восстановление пароля
+///////
+
+// запросить ссылку
+message RecoveryAsk {
+    string email = 1;
+}
+
+// проверить код
+message RecoveryValidate {
+    string code = 1;
+}
+
+// сменить пароль
+message RecoveryRecover {
+    string code = 1;
+    string password = 2;
+}
