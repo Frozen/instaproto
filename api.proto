@@ -88,6 +88,10 @@ message TicketMessage {
     uint64 created_at = 6;
 }
 
+message NewTicketMessage {
+    string message = 1;
+}
+
 message Ticket {
     uint64 id = 1;
     string title = 2;
