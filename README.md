@@ -9,6 +9,7 @@
 
 ## User
 ##### POST /api/v1/login Login
+##### POST /api/v1/register Register
 
 
 ## Subjects
