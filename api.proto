@@ -17,7 +17,7 @@ message Instagram {
     uint64 user_id = 1;
     string username = 2;
     string profile_picture = 3;
-    uint64 instagram_id = 4;
+    string instagram_id = 4;
     // кол-во подписчиков
     uint64 subscribers = 5;
     // ранг/уроверь в нашей системе
