@@ -13,6 +13,15 @@ message User {
     repeated Instagram instagrams = 3;
 }
 
+message Me {
+    uint64 id = 1;
+    string email = 2;
+    string login = 3;
+    string phone = 4;
+    uint64 balance = 5;
+    repeated Instagram instagrams = 6;
+}
+
 message Instagram {
     uint64 user_id = 1;
     string username = 2;
@@ -24,6 +33,8 @@ message Instagram {
     uint64 rang = 6;
     // реферал, кто пригласил пользователя
     uint64 parent_id = 7;
+    // уникальная ссылка
+    string referrer = 8;
 }
 
 // тематика
@@ -50,9 +61,17 @@ message Login {
     string password = 2;
 }
 
+message RegisterHidden {
+    string email = 1;
+    string password = 2;
+}
+
 message Register {
     string email = 1;
     string password = 2;
+    string referrer = 3;
+    string phone = 4;
+    string login = 5;
 }
 
 // workers
@@ -60,14 +79,14 @@ message InstagramJob {
     uint64 id = 1;
     // название типа задачи
     string name = 2;
-    uint64 instagram_accout_id = 3;
+    uint64 instagram_account_id = 3;
     string instagram_username = 4;
 }
 
 message InstagramJobReceived {
     uint64 id = 1;
     string name = 2;
-    uint64 instagram_accout_id = 3;
+    uint64 instagram_account_id = 3;
     string instagram_username = 4;
 
     repeated string usernames = 5;
