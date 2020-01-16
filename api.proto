@@ -52,10 +52,12 @@ message InstagramForm {
     uint64 account_type = 2;
     // 1-3 включительно тематики, о которых мой аккаунт
     repeated uint64 my_account_subjects = 3;
+    // 0 - unknown, 1 - male, 2 - female
+    uint32 my_sex = 4;
     // 3 тематики, на которые мне интересно подписаться
-    repeated uint64 i_interested_in_subjects = 4;
+    repeated uint64 i_interested_in_subjects = 5;
     // city
-    string city = 5;
+    string city = 6;
 
 }
 
