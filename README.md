@@ -34,9 +34,9 @@
 
  
 # Инстаграм
-## Subjects (тематики)
-##### GET /api/v1/subjects []Subject
-## Авторизоваться с помощью инстаграма
-##### GET /api/v1/instagram/auth
-## Форма для регистрации инстаграм аккаунта
-##### POST /api/v1/fill-instagram-form InstagramForm
+### Subjects (тематики)
+#### GET /api/v1/subjects []Subject
+### Авторизоваться с помощью инстаграма
+#### GET /api/v1/instagram/auth
+### Форма для регистрации инстаграм аккаунта
+#### POST /api/v1/fill-instagram-form InstagramForm
