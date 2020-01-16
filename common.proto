@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+//package com;
+option optimize_for = SPEED;
+
+option go_package = "pb";
+
+enum MessageCode {
+    UNDEFINED = 0;
+    RECORD_NOT_FOUND = 1;
+
+}
+
+message Error {
+    MessageCode message_code = 1;
+    string description = 2;
+}

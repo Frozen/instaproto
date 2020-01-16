@@ -13,11 +13,6 @@
 ##### POST /api/v1/register Register   регистрация для пользователей
 ##### GET /api/v1/me Me информация о текущем пользователе
 
-
-## Subjects
-##### GET /api/v1/subjects []Subject
-
-
 ## смена пароля
 ### запросить
 #### POST /api/v1/recovery/ask RecoveryAsk
@@ -38,4 +33,8 @@
 #### POST /api/v1/tickets/:id/close -
 
  
-
+# Инстаграм
+## Subjects (тематики)
+##### GET /api/v1/subjects []Subject
+##### GET /api/v1/instagram/auth
+##### POST /api/v1/fill-instagram-form InstagramForm

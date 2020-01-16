@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package pb;
 option optimize_for = SPEED;
+import "common.proto";
 
 message Timestamp {
 
@@ -35,6 +36,8 @@ message Instagram {
     uint64 parent_id = 7;
     // уникальная ссылка
     string referrer = 8;
+    // заполнена форма регистрации инстаграм аккаунта
+    bool AccountFilled = 9;
 }
 
 // тематика
@@ -145,4 +148,11 @@ message RecoveryValidate {
 message RecoveryRecover {
     string code = 1;
     string password = 2;
+}
+
+
+
+// just for correct import
+message Stub {
+    Error error = 1;
 }
