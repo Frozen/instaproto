@@ -56,9 +56,10 @@ message InstagramForm {
     uint32 my_sex = 4;
     // 3 тематики, на которые мне интересно подписаться
     repeated uint64 i_interested_in_subjects = 5;
+    // пол который мне интересен
+    uint32 i_interested_in_sex = 6;
     // city
-    string city = 6;
-
+    string city = 7;
 }
 
 message Login {

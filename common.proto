@@ -6,9 +6,17 @@ option optimize_for = SPEED;
 option go_package = "pb";
 
 enum MessageCode {
-    UNDEFINED = 0;
-    RECORD_NOT_FOUND = 1;
+    UndefinedError = 0;
+    InternalError  = 1;
+    RecordNotFound = 2;
 
+    DuplicateMyAccountSubjects        = 50;
+    DuplicateInterestedIn             = 51;
+    TooManyMyAccountSubjects          = 52;
+    NoMyAccountSubjects               = 53;
+    IInterestedInSubjectsInvalidCount = 54;
+    InvalidMySex                      = 55;
+    InvalidInterestedInSex            = 56;
 }
 
 message Error {
