@@ -12,6 +12,7 @@
 ##### POST /api/v1/register-hidden RegisterHidden  скрытая регистрация
 ##### POST /api/v1/register Register   регистрация для пользователей
 ##### GET /api/v1/me Me информация о текущем пользователе
+##### GET /api/v1/loginas/:id войти под пользователем
 
 ## смена пароля
 ### запросить
