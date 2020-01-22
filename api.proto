@@ -48,7 +48,7 @@ message Subject {
 }
 
 message InstagramForm {
-    uint64 instagram_id = 1;
+    uint64 id = 1;
     // тип акканта, личный 1, бизнес 2
     uint64 account_type = 2;
     // 1-3 включительно тематики, о которых мой аккаунт
