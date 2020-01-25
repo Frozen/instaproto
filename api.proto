@@ -11,7 +11,7 @@ message Timestamp {
 message User {
     uint64 id = 1;
     string email = 2;
-    repeated Instagram instagrams = 3;
+    repeated InstagramAccount instagrams = 3;
 }
 
 message Me {
@@ -20,10 +20,10 @@ message Me {
     string login = 3;
     string phone = 4;
     uint64 balance = 5;
-    repeated Instagram instagrams = 6;
+    repeated InstagramAccount instagrams = 6;
 }
 
-message Instagram {
+message InstagramAccount {
     uint64 id = 1;
     uint64 user_id = 2;
     string username = 3;
