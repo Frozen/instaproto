@@ -11,6 +11,9 @@ message Login {
 message User {
     uint64 id = 1;
     string email = 2;
+    string password =3;
+    string login = 4;
+    string phone = 5;
 }
 
 // тематика
@@ -27,4 +30,19 @@ message InstagramAccount {
     string city = 5;
     // пользователь прошел регистрацию
     bool account_filled = 6;
+}
+
+message InstagramAccountCreate {
+    uint64 user_id =1;
+    string remote_id = 2;
+    string username = 3;
+    string image = 4;
+    string city = 5;
+    repeated uint64 my_account_subjects = 6;
+    repeated uint64 i_interested_in_subjects = 7;
+    uint32 my_sex = 8;
+    uint32 i_interested_in_sex = 9;
+
+    // пользователь прошел регистрацию
+//    bool account_filled = 10;
 }
