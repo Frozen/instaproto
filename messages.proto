@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package proto;
+option optimize_for = SPEED;
+
+// check if blogger has subscriber
+message HasSubscriber {
+    string blogger = 1;
+    string needle = 2;
+    uint64 limit_users_to_scan = 3;
+}
+
+message Request {
+    uint64 id = 1;
+    string type = 2;
+    oneof body {
+        HasSubscriber has_subscriber = 5;
+    }
+}
+
+message Response {
+    uint64 id = 2;
+}

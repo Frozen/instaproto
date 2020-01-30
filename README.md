@@ -42,4 +42,4 @@
 ### Форма для регистрации инстаграм аккаунта
 #### POST /api/v1/fill-instagram-form InstagramForm
 ### Первое обязательное задание (выбрать 12 человек)
-#### GET /api/v1/instagram/twelve/:instagram_account_id []Instagram
+#### GET /api/v1/instagram/twelve/:instagram_account_id []InstagramAccount

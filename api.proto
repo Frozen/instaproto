@@ -38,7 +38,7 @@ message InstagramAccount {
     // уникальная ссылка
     string referrer = 9;
     // заполнена форма регистрации инстаграм аккаунта
-    bool AccountFilled = 10;
+    bool account_filled = 10;
 }
 
 // тематика
@@ -54,10 +54,12 @@ message InstagramForm {
     // 1-3 включительно тематики, о которых мой аккаунт
     repeated uint64 my_account_subjects = 3;
 
+    // 0 - unknown, 1 - male, 2 - female
     uint32 my_sex = 4;
     // 3 тематики, на которые мне интересно подписаться
     repeated uint64 i_interested_in_subjects = 5;
 
+    // 0 - unknown, 1 - male, 2 - female
     uint32 i_interested_in_sex = 6;
     //
     string city = 7;
@@ -79,24 +81,6 @@ message Register {
     string referrer = 3;
     string phone = 4;
     string login = 5;
-}
-
-// workers
-message InstagramJob {
-    uint64 id = 1;
-    // название типа задачи
-    string name = 2;
-    uint64 instagram_account_id = 3;
-    string instagram_username = 4;
-}
-
-message InstagramJobReceived {
-    uint64 id = 1;
-    string name = 2;
-    uint64 instagram_account_id = 3;
-    string instagram_username = 4;
-
-    repeated string usernames = 5;
 }
 
 // обратная связь
