@@ -3,21 +3,34 @@ syntax = "proto3";
 package proto;
 option optimize_for = SPEED;
 
+message InstagramUserInfo {
+    string username = 1;  // username
+    string user_id = 2; // also string
+}
+
 // check if blogger has subscriber
 message HasSubscriber {
-    string blogger = 1;
-    string needle = 2;
-    uint64 limit_users_to_scan = 3;
+    InstagramUserInfo blogger = 1; // blogger
+    InstagramUserInfo needle = 2; // user username
+    uint64 limit_users_to_scan = 3; // usually we check only 1000 users
 }
+
+
+// type  HAS_SUBSCRIBER
 
 message Request {
     uint64 id = 1;
     string type = 2;
-    oneof body {
-        HasSubscriber has_subscriber = 5;
-    }
+    HasSubscriber has_subscriber = 3;
+//    oneof body {
+//        HasSubscriber has_subscriber = 5;
+//    }
 }
 
 message Response {
-    uint64 id = 2;
+    uint64 id = 1;
+    string type = 2;
+    bool successful = 3;
+    string error = 4;
+    bool bool = 5;
 }

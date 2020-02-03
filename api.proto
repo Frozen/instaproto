@@ -144,3 +144,23 @@ message RecoveryRecover {
 message Stub {
     Error error = 1;
 }
+
+// type = SUBSCRIBE | COMMENT
+message InstagramTask {
+    uint64 id = 1;
+    string type = 2;
+    oneof body {
+        InstagramTaskSubscribe subscribe = 3;
+        InstagramTaskComment comment = 4;
+    }
+}
+
+// задача на подписку. Если required, то на него обязательно надо подписаться
+message InstagramTaskSubscribe {
+    InstagramAccount instagram_account = 1;
+    bool required = 2;
+}
+
+message InstagramTaskComment {
+
+}
