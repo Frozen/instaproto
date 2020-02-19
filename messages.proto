@@ -16,15 +16,37 @@ message HasSubscriber {
 }
 
 
-// type  HAS_SUBSCRIBER
+// type  HAS_SUBSCRIBER | FEED | COMMENTS
 
 message Request {
     uint64 id = 1;
     string type = 2;
     HasSubscriber has_subscriber = 3;
-//    oneof body {
-//        HasSubscriber has_subscriber = 5;
-//    }
+
+    // this field is required for FEED request
+    string user_id = 4;
+
+    // field required for COMMENTS request
+    // media id  , something like 1240569587877802145_2232431787
+    string media_id = 5;
+}
+
+
+///////////////////// RESPONSE ///////////////////////
+
+
+// type  HAS_SUBSCRIBER | FEED | COMMENTS
+// список контента у пользователя
+message FeedResponse {
+    string pk = 1;
+    string id = 2;
+    repeated Image images = 3;
+}
+
+message Image {
+    uint32 width = 1;
+    uint32 height = 2;
+    string url = 3;
 }
 
 message Response {
@@ -33,4 +55,5 @@ message Response {
     bool successful = 3;
     string error = 4;
     bool bool = 5;
+    repeated FeedResponse feed_response = 6;
 }
