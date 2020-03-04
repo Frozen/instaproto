@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto;
+package messages;
 option optimize_for = SPEED;
 
 message InstagramUserInfo {
@@ -8,23 +8,18 @@ message InstagramUserInfo {
     string user_id = 2; // also string
 }
 
-// check if blogger has subscriber
-message HasSubscriber {
-    InstagramUserInfo blogger = 1; // blogger
-    InstagramUserInfo needle = 2; // user username
-    uint64 limit_users_to_scan = 3; // usually we check only 1000 users
-}
-
-
 // type  HAS_SUBSCRIBER | FEED | COMMENTS
 
 message Request {
     uint64 id = 1;
     string type = 2;
-    HasSubscriber has_subscriber = 3;
+
+    // this field is required for FEED and HAS_SUBSCRIBER requests
+    string username = 3;
+    string needle = 4;
 
     // this field is required for FEED request
-    string user_id = 4;
+//    string user_id = 4;
 
     // field required for COMMENTS request
     // media id  , something like 1240569587877802145_2232431787
@@ -52,8 +47,9 @@ message Image {
 message Response {
     uint64 id = 1;
     string type = 2;
-    bool successful = 3;
-    string error = 4;
-    bool bool = 5;
-    repeated FeedResponse feed_response = 6;
+    string user_id = 3;
+    bool successful = 4;
+    string error = 5;
+    bool bool = 6;
+    repeated FeedResponse feed_response = 7;
 }
