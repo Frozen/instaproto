@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pb;
 option optimize_for = SPEED;
-import "common.proto";
+//import "common.proto";
 
 message Timestamp {
 
