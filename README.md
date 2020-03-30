@@ -9,8 +9,11 @@
 
 ## User
 ##### POST /api/v1/login Login
-##### POST /api/v1/register-hidden RegisterHidden  скрытая регистрация
-##### POST /api/v1/register Register   регистрация для пользователей
+
+#### Скрытая регистрация, отличается от основной преимущественно отсутствием обязательного referrer'a
+##### POST /api/v1/register-hidden RegisterHidden 
+#### Регистрация для пользователей
+##### POST /api/v1/register Register 
 ##### GET /api/v1/me Me информация о текущем пользователе
 ##### GET /api/v1/loginas/:id войти под пользователем
 
@@ -37,8 +40,8 @@
 # Инстаграм
 ### Subjects (тематики)
 #### GET /api/v1/subjects []Subject
-### Авторизоваться с помощью инстаграма
-#### GET /api/v1/instagram/auth
+~~Авторизоваться с помощью инстаграма~~ не актуально
+~~#### GET /api/v1/instagram/auth~~
 ### Форма для регистрации инстаграм аккаунта
 #### POST /api/v1/fill-instagram-form InstagramForm
 ### Первое обязательное задание (выбрать 12 человек)

@@ -48,6 +48,7 @@ message Subject {
 }
 
 message InstagramForm {
+    // ссылка на профиль в инстаграм, например https://www.instagram.com/leonardodicaprio/
     string profile_url = 1;
     // тип акканта, личный 1, бизнес 2
     uint64 account_type = 2;
