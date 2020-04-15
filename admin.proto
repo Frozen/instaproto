@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package admin;
+package pb;
 option optimize_for = SPEED;
 
 message Login {
@@ -45,4 +45,10 @@ message InstagramAccountCreate {
 
     // пользователь прошел регистрацию
 //    bool account_filled = 10;
+}
+
+message Admin {
+    uint64 id = 1;
+    string username = 2;
+    uint64 rights = 3; // 1 redactor, 2 admin
 }
