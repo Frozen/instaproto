@@ -71,10 +71,10 @@ message Login {
     string password = 2;
 }
 
-message RegisterHidden {
-    string email = 1;
-    string password = 2;
-}
+//message RegisterHidden {
+//    string email = 1;
+//    string password = 2;
+//}
 
 message Register {
     string email = 1;
