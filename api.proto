@@ -50,6 +50,8 @@ message InstagramAccount {
     uint64 balance = 14;
     // количество предупреждений
     uint64 warnings = 15;
+    // прошел первое обязательное задание
+    bool first_task_completed = 16;
 
 }
 
