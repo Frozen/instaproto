@@ -186,3 +186,17 @@ message InstagramTaskSubscribe {
 message InstagramTaskComment {
     string url = 1;
 }
+
+message Team {
+    uint64 all = 1;
+    uint64 invited = 2;
+    uint64 invited_active = 3;
+
+    repeated InstagramAccount rang1 = 4;
+    repeated InstagramAccount rang2 = 5;
+    repeated InstagramAccount rang3 = 6;
+    repeated InstagramAccount rang4 = 7;
+    repeated InstagramAccount rang5 = 8;
+    repeated InstagramAccount rang6 = 9;
+    repeated InstagramAccount rang7 = 10;
+}
