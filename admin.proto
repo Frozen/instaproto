@@ -24,12 +24,17 @@ message Subject {
 
 message InstagramAccount {
     uint64 id = 1;
-    User user = 2;
+    string login = 2;
     string username = 3;
     string image = 4;
     string city = 5;
+    string email = 6;
+    string link = 7;
     // пользователь прошел регистрацию
-    bool account_filled = 6;
+    bool account_filled = 8;
+    //
+
+    bool approved =9;
 }
 
 message InstagramAccountCreate {
