@@ -57,3 +57,9 @@ message Admin {
     string username = 2;
     uint64 rights = 3; // 1 redactor, 2 admin
 }
+
+message InstagramAccountPost {
+    uint64 id = 1;
+    string url = 2;
+    uint64 acc_id = 3;
+}
