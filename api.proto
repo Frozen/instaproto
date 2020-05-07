@@ -53,12 +53,20 @@ message InstagramAccount {
     // прошел первое обязательное задание
     bool first_task_completed = 16;
 
+    string city = 17;
 }
 
 // тематика
 message Subject {
     uint64 id = 1;
     string name = 2;
+}
+
+message Tariff {
+    uint64 id = 1;
+    string name = 2;
+    uint64 tokens_num = 3;
+    uint64 price_rub = 4;
 }
 
 message InstagramForm {
@@ -83,6 +91,14 @@ message InstagramForm {
 message Login {
     string email = 1;
     string password = 2;
+}
+
+message PayRequest {
+    uint64 tariff_id = 1;
+}
+
+message PayResponse {
+    string redirect_url = 1;
 }
 
 //message RegisterHidden {
