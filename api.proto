@@ -188,7 +188,9 @@ message InstagramTask {
     uint64 id = 1;
     string type = 2;
     InstagramTaskSubscribe subscribe = 3; // подписаться на пользователя
-    InstagramTaskComment comment = 4; // прокомментировать чей-нить пост
+//    InstagramTaskComment like_and_comment = 4; // прокомментировать и лайкнуть чей-нить пост
+    string image = 5;
+    string url = 6;
 }
 
 // задача на подписку. Если required, то на него обязательно надо подписаться
