@@ -29,12 +29,19 @@ message InstagramAccount {
     string image = 4;
     string city = 5;
     string email = 6;
-    string link = 7;
+    string profile_url = 7;
     // пользователь прошел регистрацию
     bool account_filled = 8;
     //
 
-    bool approved =9;
+
+    bool approved = 9;
+
+    uint64 rang = 10;
+
+    bool banned = 11;
+
+    bool first_task_completed = 12;
 }
 
 message InstagramAccountCreate {
@@ -62,4 +69,9 @@ message InstagramAccountPost {
     uint64 id = 1;
     string url = 2;
     uint64 acc_id = 3;
+}
+
+
+message Uint64 {
+    uint64 value = 1;
 }

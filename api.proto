@@ -54,6 +54,8 @@ message InstagramAccount {
     bool first_task_completed = 16;
 
     string city = 17;
+
+    uint64 paid_days = 18;
 }
 
 // тематика
