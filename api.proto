@@ -56,6 +56,8 @@ message InstagramAccount {
     string city = 17;
 
     uint64 paid_days = 18;
+
+    string instagram_url = 19;
 }
 
 // тематика
@@ -219,4 +221,6 @@ message Team {
     repeated InstagramAccount rang5 = 8;
     repeated InstagramAccount rang6 = 9;
     repeated InstagramAccount rang7 = 10;
+
+    InstagramAccount invited_by = 11;
 }
