@@ -58,6 +58,8 @@ message InstagramAccount {
     uint64 paid_days = 18;
 
     string instagram_url = 19;
+
+    bool email_confirmed = 20;
 }
 
 // тематика
