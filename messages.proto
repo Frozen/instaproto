@@ -8,7 +8,7 @@ message InstagramUserInfo {
     string user_id = 2; // also string
 }
 
-// type  HAS_SUBSCRIBER | FEED | COMMENTS
+// type  PROFILE | HAS_SUBSCRIBER | FEED | COMMENTS
 
 message Request {
     uint64 id = 1;
