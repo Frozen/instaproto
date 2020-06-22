@@ -75,3 +75,8 @@ message InstagramAccountPost {
 message Uint64 {
     uint64 value = 1;
 }
+
+message ChangeParent {
+    uint64 acc_id = 1;
+    uint64 parent_id = 2;
+}
