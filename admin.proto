@@ -80,3 +80,8 @@ message ChangeParent {
     uint64 acc_id = 1;
     uint64 parent_id = 2;
 }
+
+message ApproveWithRef {
+    uint64 acc_id = 1;
+    string parent_ref = 2;
+}
