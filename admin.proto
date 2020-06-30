@@ -33,8 +33,6 @@ message InstagramAccount {
     // пользователь прошел регистрацию
     bool account_filled = 8;
     //
-
-
     bool approved = 9;
 
     uint64 rang = 10;
@@ -42,6 +40,15 @@ message InstagramAccount {
     bool banned = 11;
 
     bool first_task_completed = 12;
+
+    string referrer = 13;
+}
+
+message UpdateInstagramAccount {
+    string login = 1;
+    string email = 2;
+    string referrer = 3;
+    uint64 rang = 4;
 }
 
 message InstagramAccountCreate {
