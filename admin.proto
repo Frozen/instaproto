@@ -76,6 +76,8 @@ message InstagramAccountPost {
     uint64 id = 1;
     string url = 2;
     uint64 acc_id = 3;
+    string profile_url = 4;
+    string created_at = 5;
 }
 
 
