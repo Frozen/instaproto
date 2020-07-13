@@ -60,6 +60,15 @@ message InstagramAccount {
     string instagram_url = 19;
 
     bool email_confirmed = 20;
+
+    // действия с оплатой (пополнение, списание средств за тариф)
+    bool notify_payments = 21;
+
+    // напоминания о новых заданиях
+    bool notify_new_tasks  = 22;
+
+    // новый пользователь в команде
+    bool notify_new_referral = 23;
 }
 
 // тематика
